@@ -2,11 +2,10 @@
 import lnservice from 'ln-service'
 import lightning from 'lightning'
 import fs from 'fs'
-import { Buffer } from 'buffer'
 import R from 'ramda'
 
-let tlsCert = fs.readFileSync('/home/proofofkeags/.polar/networks/1/volumes/lnd/alice/tls.cert').toString('base64')
-let macaroon = fs.readFileSync('/home/proofofkeags/.polar/networks/1/volumes/lnd/alice/data/chain/bitcoin/regtest/admin.macaroon').toString('base64')
+let tlsCert = fs.readFileSync('[CHANGEME]').toString('base64')
+let macaroon = fs.readFileSync('[CHANGEME]').toString('base64')
 let lndAddr = '127.0.0.1:10001'
 
 async function main() {
@@ -40,13 +39,14 @@ async function main() {
 }
 
 async function channelAcceptorPolicy(channel) {
-    await sleep(1000)
     console.log(JSON.stringify(channel))
     channel.accept()
 }
 
 async function forwardingPolicy(forward_request) {
     // TODO
+    console.log(JSON.stringify(forward_request))
+    forward_request.accept()
 }
 
 async function sleep(n) {
