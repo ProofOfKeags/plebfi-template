@@ -1,0 +1,24 @@
+{
+  "name": "plebfi-template",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Dig deeper into LND's API's to build better Lightning Applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProofOfKeags/plebfi-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProofOfKeags/plebfi-template/issues"
+  },
+  "homepage": "https://github.com/ProofOfKeags/plebfi-template#readme",
+  "dependencies": {
+    "ln-service": "^52.0.1",
+    "ramda": "^0.27.1"
+  }
+}
